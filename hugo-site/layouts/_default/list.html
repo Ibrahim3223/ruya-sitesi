@@ -1,0 +1,20 @@
+{{ define "main" }}
+<div class="list-page">
+    <h1>{{ .Title }}</h1>
+
+    {{ with .Content }}
+    <div class="list-intro">{{ . }}</div>
+    {{ end }}
+
+    <div class="list-grid">
+        {{ range .Paginator.Pages }}
+        <article class="list-item">
+            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            <p>{{ .Description | truncate 120 }}</p>
+        </article>
+        {{ end }}
+    </div>
+
+    {{ template "_internal/pagination.html" . }}
+</div>
+{{ end }}

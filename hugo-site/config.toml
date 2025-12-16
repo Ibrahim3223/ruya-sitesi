@@ -1,0 +1,53 @@
+baseURL = "https://ruyatabirisozlugu.com/"
+languageCode = "tr"
+title = "Rüya Tabiri Sözlüğü - Rüya Yorumları ve Anlamları"
+description = "Türkiye'nin en kapsamlı rüya tabiri sözlüğü. İslami ve psikolojik rüya yorumları, binlerce detaylı rüya anlamı."
+
+enableRobotsTXT = true
+canonifyURLs = true
+
+[params]
+  siteName = "Rüya Tabiri Sözlüğü"
+  description = "Rüyalarınızın anlamını keşfedin. İslami kaynaklara, psikolojik yorumlara ve geleneksel tabirlere göre binlerce rüya tabiri."
+  author = "Rüya Tabiri Sözlüğü"
+  logo = "🌙"
+  tagline = "Rüyalarınızın Anlamını Keşfedin"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
+  filename = "sitemap.xml"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
+  page = ["HTML"]
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[permalinks]
+  ruya = "/ruya/:slug/"
+
+[minify]
+  minifyOutput = true
+
+[pagination]
+  pagerSize = 24
+
+[related]
+  includeNewer = true
+  threshold = 80
+  toLower = true
+  [[related.indices]]
+    name = "categories"
+    weight = 100
+  [[related.indices]]
+    name = "tags"
+    weight = 80

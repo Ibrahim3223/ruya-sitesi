@@ -1,0 +1,24 @@
+{{ define "main" }}
+<div class="list-page">
+    <div class="list-header">
+        <nav class="breadcrumb">
+            <a href="/">Ana Sayfa</a>
+            <span class="breadcrumb-sep">›</span>
+            <span>{{ .Title | title }}</span>
+        </nav>
+        <h1>{{ .Title | title }}</h1>
+        <p class="list-intro">{{ .Title | title }} kategorisindeki tüm rüya tabirleri. {{ len .Pages }} içerik bulundu.</p>
+    </div>
+
+    <div class="list-grid">
+        {{ range .Paginator.Pages }}
+        <article class="list-item">
+            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            <p>{{ .Description | truncate 120 }}</p>
+        </article>
+        {{ end }}
+    </div>
+
+    {{ template "_internal/pagination.html" . }}
+</div>
+{{ end }}

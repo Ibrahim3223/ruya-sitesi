@@ -1,0 +1,46 @@
+{{ define "main" }}
+<article class="article">
+    <header class="article-header">
+        <h1>{{ .Title }}</h1>
+        <div class="article-meta">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">
+                {{ .Date.Format "2 January 2006" }}
+            </time>
+            {{ with .Params.categories }}
+            <span class="category">
+                {{ range . }}
+                <a href="/categories/{{ . | urlize }}/">{{ . }}</a>
+                {{ end }}
+            </span>
+            {{ end }}
+        </div>
+    </header>
+
+    <div class="article-content">
+        {{ .Content }}
+    </div>
+
+    <aside class="related-posts">
+        <h3>İlgili Rüya Tabirleri</h3>
+        {{ $related := .Site.RegularPages.Related . | first 6 }}
+        {{ with $related }}
+        <div class="related-grid">
+            {{ range . }}
+            <a href="{{ .Permalink }}" class="related-item">{{ .Title }}</a>
+            {{ end }}
+        </div>
+        {{ end }}
+    </aside>
+
+    <footer class="article-footer">
+        {{ with .Params.tags }}
+        <div class="tags">
+            <strong>Etiketler:</strong>
+            {{ range . }}
+            <a href="/tags/{{ . | urlize }}/" class="tag">{{ . }}</a>
+            {{ end }}
+        </div>
+        {{ end }}
+    </footer>
+</article>
+{{ end }}

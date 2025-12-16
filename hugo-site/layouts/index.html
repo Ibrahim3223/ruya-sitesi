@@ -1,0 +1,134 @@
+{{ define "main" }}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>{{ .Site.Params.siteName }}</h1>
+        <p class="hero-tagline">{{ .Site.Params.tagline }}</p>
+        <p class="hero-description">Türkiye'nin en kapsamlı rüya tabiri sözlüğü. İslami kaynaklara, psikolojik yorumlara ve geleneksel tabirlere göre rüyalarınızı yorumlayın.</p>
+
+        <div class="hero-search">
+            <svg class="hero-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+            </svg>
+            <input type="text" id="hero-search-input" placeholder="Rüyanızı arayın... örn: yılan, su, bebek" autocomplete="off">
+            <div id="hero-search-results" class="search-results"></div>
+        </div>
+
+        <div class="hero-tags">
+            <a href="/ruya/ruyada-yilan-gormek/" class="hero-tag">Yılan</a>
+            <a href="/ruya/ruyada-su-gormek/" class="hero-tag">Su</a>
+            <a href="/ruya/ruyada-olu-gormek/" class="hero-tag">Ölü</a>
+            <a href="/ruya/ruyada-bebek-gormek/" class="hero-tag">Bebek</a>
+            <a href="/ruya/ruyada-altin-gormek/" class="hero-tag">Altın</a>
+            <a href="/ruya/ruyada-dis-gormek/" class="hero-tag">Diş</a>
+            <a href="/ruya/ruyada-at-gormek/" class="hero-tag">At</a>
+            <a href="/ruya/ruyada-kopek-gormek/" class="hero-tag">Köpek</a>
+        </div>
+    </div>
+</section>
+
+<!-- Kategoriler -->
+<section class="section">
+    <h2 class="section-title">Kategorilere Göre <span>Rüya Tabirleri</span></h2>
+    <div class="categories-grid">
+        <a href="/categories/hayvanlar/" class="category-card">
+            <span class="category-icon">🐾</span>
+            <span class="category-name">Hayvanlar</span>
+        </a>
+        <a href="/categories/insanlar/" class="category-card">
+            <span class="category-icon">👥</span>
+            <span class="category-name">İnsanlar</span>
+        </a>
+        <a href="/categories/nesneler/" class="category-card">
+            <span class="category-icon">💎</span>
+            <span class="category-name">Nesneler</span>
+        </a>
+        <a href="/categories/mekanlar/" class="category-card">
+            <span class="category-icon">🏠</span>
+            <span class="category-name">Mekanlar</span>
+        </a>
+        <a href="/categories/doga/" class="category-card">
+            <span class="category-icon">🌊</span>
+            <span class="category-name">Doğa</span>
+        </a>
+        <a href="/categories/durumlar/" class="category-card">
+            <span class="category-icon">⚡</span>
+            <span class="category-name">Durumlar</span>
+        </a>
+        <a href="/categories/dini/" class="category-card">
+            <span class="category-icon">🕌</span>
+            <span class="category-name">Dini</span>
+        </a>
+        <a href="/categories/vucut/" class="category-card">
+            <span class="category-icon">🫀</span>
+            <span class="category-name">Vücut</span>
+        </a>
+        <a href="/categories/yiyecekler/" class="category-card">
+            <span class="category-icon">🍎</span>
+            <span class="category-name">Yiyecekler</span>
+        </a>
+        <a href="/categories/renkler/" class="category-card">
+            <span class="category-icon">🌈</span>
+            <span class="category-name">Renkler</span>
+        </a>
+    </div>
+    <div class="text-center mt-3">
+        <a href="/categories/" class="view-all-btn">Tüm Kategorileri Gör →</a>
+    </div>
+</section>
+
+<!-- Son Eklenen Tabirler -->
+<section class="section section-alt">
+    <div class="container">
+        <h2 class="section-title">Son Eklenen <span>Tabirler</span></h2>
+        <div class="cards-grid">
+            {{ range first 12 (where .Site.RegularPages "Section" "ruya") }}
+            <a href="{{ .Permalink }}" class="card card-link">
+                <h3 class="card-title">{{ .Title }}</h3>
+                <p class="card-excerpt">{{ .Description | truncate 100 }}</p>
+                <div class="card-meta">
+                    {{ with .Params.categories }}
+                    <span class="card-category">{{ index . 0 }}</span>
+                    {{ end }}
+                </div>
+            </a>
+            {{ end }}
+        </div>
+        <div class="text-center mt-4">
+            <a href="/ruya/" class="view-all-btn">Tüm Tabirleri Gör →</a>
+        </div>
+    </div>
+</section>
+
+<!-- Popüler Tabirler -->
+<section class="section">
+    <h2 class="section-title">En Çok Aranan <span>Rüya Tabirleri</span></h2>
+    <div class="cards-grid">
+        {{ $popular := slice
+            "ruyada-yilan-gormek"
+            "ruyada-su-gormek"
+            "ruyada-olu-gormek"
+            "ruyada-bebek-gormek"
+            "ruyada-altin-gormek"
+            "ruyada-kopek-gormek"
+            "ruyada-kedi-gormek"
+            "ruyada-at-gormek"
+        }}
+        {{ range $popular }}
+        {{ $page := $.Site.GetPage (printf "/ruya/%s" .) }}
+        {{ with $page }}
+        <a href="{{ .Permalink }}" class="card card-link">
+            <h3 class="card-title">{{ .Title }}</h3>
+            <p class="card-excerpt">{{ .Description | truncate 100 }}</p>
+            <div class="card-meta">
+                {{ with .Params.categories }}
+                <span class="card-category">{{ index . 0 }}</span>
+                {{ end }}
+            </div>
+        </a>
+        {{ end }}
+        {{ end }}
+    </div>
+</section>
+{{ end }}

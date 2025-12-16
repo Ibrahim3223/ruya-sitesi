@@ -1,0 +1,124 @@
+{
+  "actions": [
+    {
+      "id": "gormek",
+      "name": "görmek"
+    },
+    {
+      "id": "oldurmek",
+      "name": "öldürmek"
+    },
+    {
+      "id": "oldurulmek",
+      "name": "öldürülmek"
+    },
+    {
+      "id": "kacmak",
+      "name": "kaçmak"
+    },
+    {
+      "id": "kovalamak",
+      "name": "kovalamak"
+    },
+    {
+      "id": "yakalamak",
+      "name": "yakalamak"
+    },
+    {
+      "id": "yemek",
+      "name": "yemek"
+    },
+    {
+      "id": "icmek",
+      "name": "içmek"
+    },
+    {
+      "id": "konusmak",
+      "name": "konuşmak"
+    },
+    {
+      "id": "sarilmak",
+      "name": "sarılmak"
+    },
+    {
+      "id": "opmek",
+      "name": "öpmek"
+    },
+    {
+      "id": "kavga_etmek",
+      "name": "kavga etmek"
+    },
+    {
+      "id": "dovmek",
+      "name": "dövmek"
+    },
+    {
+      "id": "dovulmek",
+      "name": "dövülmek"
+    },
+    {
+      "id": "aglamak",
+      "name": "ağlamak"
+    },
+    {
+      "id": "gulmek",
+      "name": "gülmek"
+    },
+    {
+      "id": "korkmak",
+      "name": "korkmak"
+    },
+    {
+      "id": "ucmak",
+      "name": "uçmak"
+    },
+    {
+      "id": "dusmek",
+      "name": "düşmek"
+    },
+    {
+      "id": "yuzmek",
+      "name": "yüzmek"
+    },
+    {
+      "id": "bogulmak",
+      "name": "boğulmak"
+    },
+    {
+      "id": "kosmak",
+      "name": "koşmak"
+    },
+    {
+      "id": "binmek",
+      "name": "binmek"
+    },
+    {
+      "id": "almak",
+      "name": "almak"
+    },
+    {
+      "id": "vermek",
+      "name": "vermek"
+    },
+    {
+      "id": "kaybetmek",
+      "name": "kaybetmek"
+    },
+    {
+      "id": "bulmak",
+      "name": "bulmak"
+    },
+    {
+      "id": "isirmak",
+      "name": "ısırmak"
+    },
+    {
+      "id": "isirilmak",
+      "name": "ısırılmak"
+    },
+    {
+      "id": "sokmak",
+      "name": "sokmak"
+    }
+  ]
+}

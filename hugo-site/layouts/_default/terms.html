@@ -1,0 +1,37 @@
+{{ define "main" }}
+<div class="list-page">
+    <div class="list-header">
+        <nav class="breadcrumb">
+            <a href="/">Ana Sayfa</a>
+            <span class="breadcrumb-sep">›</span>
+            <span>Kategoriler</span>
+        </nav>
+        <h1>Rüya Kategorileri</h1>
+        <p class="list-intro">Rüya tabirlerini kategorilere göre keşfedin.</p>
+    </div>
+
+    <div class="categories-page-grid">
+        {{ range .Data.Terms.Alphabetical }}
+        <a href="{{ .Page.Permalink }}" class="category-page-card">
+            <span class="category-page-icon">
+                {{ if eq .Page.Title "hayvanlar" }}🐾
+                {{ else if eq .Page.Title "insanlar" }}👥
+                {{ else if eq .Page.Title "nesneler" }}💎
+                {{ else if eq .Page.Title "mekanlar" }}🏠
+                {{ else if eq .Page.Title "doga" }}🌊
+                {{ else if eq .Page.Title "durumlar" }}⚡
+                {{ else if eq .Page.Title "dini" }}🕌
+                {{ else if eq .Page.Title "vucut" }}🫀
+                {{ else if eq .Page.Title "yiyecekler" }}🍎
+                {{ else if eq .Page.Title "renkler" }}🌈
+                {{ else if eq .Page.Title "genel" }}📖
+                {{ else }}✨
+                {{ end }}
+            </span>
+            <span class="category-page-name">{{ .Page.Title | title }}</span>
+            <span class="category-page-count">{{ .Count }} içerik</span>
+        </a>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

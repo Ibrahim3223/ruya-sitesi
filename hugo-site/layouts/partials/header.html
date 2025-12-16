@@ -1,0 +1,30 @@
+<header class="header" id="header">
+    <nav class="nav">
+        <a href="/" class="logo">
+            <span class="logo-icon">🌙</span>
+            <span class="logo-text">Rüya Tabiri Sözlüğü</span>
+        </a>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="/" {{ if .IsHome }}class="active"{{ end }}>Ana Sayfa</a></li>
+            <li><a href="/ruya/" {{ if eq .Section "ruya" }}class="active"{{ end }}>Tüm Tabirler</a></li>
+            <li><a href="/categories/">Kategoriler</a></li>
+            <li><a href="/hakkimizda/">Hakkımızda</a></li>
+        </ul>
+
+        <div class="nav-search">
+            <svg class="nav-search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+            </svg>
+            <input type="text" id="search-input" placeholder="Rüya ara..." autocomplete="off">
+            <div id="nav-search-results" class="search-results"></div>
+        </div>
+
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menü">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 12h18M3 6h18M3 18h18"></path>
+            </svg>
+        </button>
+    </nav>
+</header>
