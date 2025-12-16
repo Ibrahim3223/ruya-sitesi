@@ -15,7 +15,12 @@
       "Bash(findstr:*)",
       "Bash(powershell -Command:*)",
       "Bash(pip install:*)",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Bash(if [ -f scripts/generation_progress.json ])",
+      "Bash(then cat scripts/generation_progress.json)",
+      "Bash(else echo \"Progress dosyasi yok\")",
+      "Bash(fi)",
+      "Bash(cat:*)"
     ]
   }
 }

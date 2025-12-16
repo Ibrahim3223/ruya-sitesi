@@ -15,5 +15,14 @@ __pycache__/
 *.pyc
 .env
 
+# API Keys - ASLA GITHUB'A PUSHLANMASIN!
+scripts/api_keys.json
+api_keys.json
+**/api_keys.json
+
+# Progress files
+scripts/generation_progress.json
+scripts/indexing_progress.json
+
 # Logs
 *.log
