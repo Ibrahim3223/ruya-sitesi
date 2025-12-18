@@ -1,0 +1,131 @@
+<!-- FAQ Section with Schema.org -->
+<div class="faq-section">
+    <h2 class="faq-title">Sıkça Sorulan Sorular</h2>
+
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>Rüya tabirleri ne kadar doğrudur?</span>
+            <span class="faq-icon">▼</span>
+        </button>
+        <div class="faq-answer">
+            <div class="faq-answer-content">
+                Rüya tabirleri, İslami geleneğe dayanan yorumlardır. Ancak, rüyaların anlamı kişinin yaşamı, duyguları ve durumuna göre değişiklik gösterebilir. Rüya tabirleri bir rehber niteliğindedir ve kesin sonuçlar vereceği garanti edilemez.
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>Hangi rüyalar önemlidir?</span>
+            <span class="faq-icon">▼</span>
+        </button>
+        <div class="faq-answer">
+            <div class="faq-answer-content">
+                Tekrar eden rüyalar, sabaha karşı görülen rüyalar ve çok net hatırlanan rüyalar genellikle daha önemli kabul edilir. Ayrıca, rüyada güçlü duygular yaşanmışsa bu da önemli olabilir.
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>Rüya tabiri nasıl yapılır?</span>
+            <span class="faq-icon">▼</span>
+        </button>
+        <div class="faq-answer">
+            <div class="faq-answer-content">
+                Rüya tabiri yaparken önce rüyada gördüğünüz ana sembolü belirleyin. Ardından bu sembolün geleneksel anlamını araştırın. Ancak, kişisel durumunuzu ve duygularınızı da dikkate almayı unutmayın.
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>Kötü rüya gördüğümde ne yapmalıyım?</span>
+            <span class="faq-icon">▼</span>
+        </button>
+        <div class="faq-answer">
+            <div class="faq-answer-content">
+                İslam inancına göre, kötü rüya gördüğünüzde sol tarafınıza üç kez tükürün, Allah'a sığının ve kimseye anlatmayın. Ayrıca namazla Allah'a yaklaşmak da önerilir.
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            <span>Her rüyanın bir anlamı var mıdır?</span>
+            <span class="faq-icon">▼</span>
+        </button>
+        <div class="faq-answer">
+            <div class="faq-answer-content">
+                Hayır, her rüyanın mutlaka derin bir anlamı yoktur. Bazı rüyalar gün içinde yaşadıklarımızın yansımasıdır. Ancak bazı rüyalar ilahi mesajlar veya bilinçaltımızdan gelen uyarılar olabilir.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FAQ Schema.org Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Rüya tabirleri ne kadar doğrudur?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rüya tabirleri, İslami geleneğe dayanan yorumlardır. Ancak, rüyaların anlamı kişinin yaşamı, duyguları ve durumuna göre değişiklik gösterebilir. Rüya tabirleri bir rehber niteliğindedir ve kesin sonuçlar vereceği garanti edilemez."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hangi rüyalar önemlidir?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tekrar eden rüyalar, sabaha karşı görülen rüyalar ve çok net hatırlanan rüyalar genellikle daha önemli kabul edilir. Ayrıca, rüyada güçlü duygular yaşanmışsa bu da önemli olabilir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Rüya tabiri nasıl yapılır?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rüya tabiri yaparken önce rüyada gördüğünüz ana sembolü belirleyin. Ardından bu sembolün geleneksel anlamını araştırın. Ancak, kişisel durumunuzu ve duygularınızı da dikkate almayı unutmayın."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kötü rüya gördüğümde ne yapmalıyım?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "İslam inancına göre, kötü rüya gördüğünüzde sol tarafınıza üç kez tükürün, Allah'a sığının ve kimseye anlatmayın. Ayrıca namazla Allah'a yaklaşmak da önerilir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Her rüyanın bir anlamı var mıdır?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hayır, her rüyanın mutlaka derin bir anlamı yoktur. Bazı rüyalar gün içinde yaşadıklarımızın yansımasıdır. Ancak bazı rüyalar ilahi mesajlar veya bilinçaltımızdan gelen uyarılar olabilir."
+      }
+    }
+  ]
+}
+</script>
+
+<script>
+function toggleFAQ(button) {
+    const faqItem = button.closest('.faq-item');
+    const isActive = faqItem.classList.contains('active');
+
+    // Close all FAQ items
+    document.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('active');
+    });
+
+    // Toggle current item
+    if (!isActive) {
+        faqItem.classList.add('active');
+    }
+}
+</script>

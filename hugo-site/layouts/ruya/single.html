@@ -73,18 +73,30 @@
         </a>
     </div>
 
-    <!-- İlgili Tabirler -->
-    <aside class="related-posts">
-        <h3>Benzer Rüya Tabirleri</h3>
-        {{ $related := .Site.RegularPages.Related . | first 8 }}
-        {{ with $related }}
-        <div class="related-grid">
+    <!-- FAQ Section -->
+    {{- partial "faq.html" . -}}
+
+    <!-- Testimonials -->
+    {{- partial "testimonials.html" . -}}
+
+    <!-- İlgili Tabirler - Geliştirilmiş -->
+    {{ $related := .Site.RegularPages.Related . | first 9 }}
+    {{ with $related }}
+    <aside class="related-posts-enhanced">
+        <h3>İlgili Rüya Tabirleri</h3>
+        <div class="related-grid-enhanced">
             {{ range . }}
-            <a href="{{ .Permalink }}" class="related-item">{{ .Title }}</a>
+            <a href="{{ .Permalink }}" class="related-item-enhanced">
+                <span class="related-icon">🌙</span>
+                <div class="related-content">
+                    <div class="related-title">{{ .Title }}</div>
+                    <div class="related-excerpt">{{ .Summary | truncate 60 }}</div>
+                </div>
+            </a>
             {{ end }}
         </div>
-        {{ end }}
     </aside>
+    {{ end }}
 
     <!-- Etiketler -->
     {{ with .Params.tags }}
