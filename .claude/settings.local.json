@@ -20,7 +20,8 @@
       "Bash(then cat scripts/generation_progress.json)",
       "Bash(else echo \"Progress dosyasi yok\")",
       "Bash(fi)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "Bash(ls:*)"
     ]
   }
 }

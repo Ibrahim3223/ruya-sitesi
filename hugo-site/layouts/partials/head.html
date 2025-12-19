@@ -7,10 +7,18 @@
 <meta name="keywords" content="{{ with .Params.keywords }}{{ delimit . ", " }}{{ else }}rüya tabiri, rüya yorumu, rüya anlamı{{ end }}">
 <meta name="author" content="{{ .Site.Params.author }}">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#6366f1">
+<meta name="theme-color" content="#1e3a8a">
 
 <link rel="canonical" href="{{ .Permalink }}">
-<link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+
+<!-- Favicons -->
+<link rel="icon" href="{{ "favicon.ico" | relURL }}" type="image/x-icon">
+<link rel="icon" href="{{ "favicon-16x16.png" | relURL }}" type="image/png" sizes="16x16">
+<link rel="icon" href="{{ "favicon-32x32.png" | relURL }}" type="image/png" sizes="32x32">
+<link rel="icon" href="{{ "android-chrome-192x192.png" | relURL }}" type="image/png" sizes="192x192">
+<link rel="icon" href="{{ "android-chrome-512x512.png" | relURL }}" type="image/png" sizes="512x512">
+<link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}" sizes="180x180">
+<link rel="manifest" href="{{ "site.webmanifest" | relURL }}">
 
 <!-- Open Graph -->
 <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}">
