@@ -121,10 +121,10 @@ a:hover {
 }
 
 .logo-image {
-    height: 36px !important;
-    width: 36px !important;
-    max-height: 36px !important;
-    max-width: 36px !important;
+    height: 48px !important;
+    width: 48px !important;
+    max-height: 48px !important;
+    max-width: 48px !important;
     object-fit: contain;
     filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
     display: block;
@@ -1666,10 +1666,10 @@ a:hover {
     }
 
     .logo-image {
-        height: 40px !important;
-        width: 40px !important;
-        max-height: 40px !important;
-        max-width: 40px !important;
+        height: 56px !important;
+        width: 56px !important;
+        max-height: 56px !important;
+        max-width: 56px !important;
     }
 
     .logo-text {
