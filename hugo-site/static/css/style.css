@@ -98,7 +98,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 16px;
+    padding: 8px 16px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -121,10 +121,10 @@ a:hover {
 }
 
 .logo-image {
-    height: 48px !important;
-    width: 48px !important;
-    max-height: 48px !important;
-    max-width: 48px !important;
+    height: 60px !important;
+    width: 60px !important;
+    max-height: 60px !important;
+    max-width: 60px !important;
     object-fit: contain;
     filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
     display: block;
@@ -1657,7 +1657,7 @@ a:hover {
 
 @media (min-width: 768px) {
     .nav {
-        padding: 14px 24px;
+        padding: 10px 24px;
     }
 
     .logo {
@@ -1666,10 +1666,10 @@ a:hover {
     }
 
     .logo-image {
-        height: 56px !important;
-        width: 56px !important;
-        max-height: 56px !important;
-        max-width: 56px !important;
+        height: 68px !important;
+        width: 68px !important;
+        max-height: 68px !important;
+        max-width: 68px !important;
     }
 
     .logo-text {
