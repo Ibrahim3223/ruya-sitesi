@@ -316,6 +316,7 @@ a:hover {
     text-align: center;
     position: relative;
     overflow: hidden;
+    min-height: 350px; /* Reserve space to prevent CLS */
 }
 
 .hero::before {
@@ -435,6 +436,8 @@ a:hover {
 
 .section {
     padding: 32px 16px;
+    min-height: 400px; /* Reserve space to prevent CLS */
+    contain: layout; /* Prevent forced reflows */
 }
 
 .section-alt {
@@ -504,6 +507,7 @@ a:hover {
     gap: 12px;
     max-width: 600px;
     margin: 0 auto;
+    min-height: 200px; /* Reserve space to prevent CLS */
 }
 
 .category-card {

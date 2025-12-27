@@ -53,9 +53,8 @@
 
 {{- partial "schema.html" . -}}
 
-<!-- Load CSS with non-blocking pattern -->
-<link rel="stylesheet" href="{{ "css/style.css" | relURL }}" media="print" onload="this.media='all'; this.onload=null;">
-<noscript><link rel="stylesheet" href="{{ "css/style.css" | relURL }}"></noscript>
+<!-- Load CSS - preload already ensures early loading -->
+<link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 
 <!-- Google Analytics - Delayed for performance -->
 <script>
