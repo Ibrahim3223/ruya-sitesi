@@ -129,6 +129,18 @@ def main():
     print("=" * 60)
     print()
 
+    # Ayni gun tekrar calismayi engelle
+    progress = load_progress()
+    today = datetime.now().strftime("%Y-%m-%d")
+
+    if progress.get('last_run_date') == today:
+        print(f"[!] Bugun ({today}) zaten calistirildi!")
+        print(f"[i] Son calistirma: {progress.get('last_run', 'Bilinmiyor')}")
+        print(f"[i] Toplam indexlenmis: {progress.get('total_indexed', 0)} URL")
+        print()
+        print("[i] Yarin tekrar calistirin.")
+        return
+
     # Credentials dosyasini kontrol et
     if not Path(CREDENTIALS_FILE).exists():
         print(f"[X] Credentials dosyasi bulunamadi:")
@@ -147,8 +159,7 @@ def main():
     print(f"[i] Sitemap: {Path(SITEMAP_FILE).name}")
     print()
 
-    # Onceki ilerlemeyi yukle
-    progress = load_progress()
+    # progress zaten yuklendi (gun kontrolu icin)
     indexed_urls = set(progress['indexed_urls'])
 
     print(f"[i] Onceden indexlenmis: {len(indexed_urls)} URL")
@@ -228,6 +239,7 @@ def main():
     # Ilerlemeyi kaydet
     progress['indexed_urls'] = list(indexed_urls.union(set(newly_indexed)))
     progress['last_run'] = datetime.now().isoformat()
+    progress['last_run_date'] = datetime.now().strftime("%Y-%m-%d")
     progress['total_indexed'] = len(progress['indexed_urls'])
     save_progress(progress)
 

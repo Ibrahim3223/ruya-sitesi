@@ -10,7 +10,7 @@
 
 <!-- Preload critical resources -->
 <link rel="preload" href="{{ "css/style.css" | relURL }}" as="style">
-<link rel="preload" href="{{ "logo-header.webp" | relURL }}" as="image" type="image/webp">
+<link rel="preload" href="{{ "logo.webp" | relURL }}" as="image" type="image/webp">
 
 <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Params.siteName }}{{ end }}</title>
 
@@ -53,7 +53,9 @@
 
 {{- partial "schema.html" . -}}
 
-<link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+<!-- Load CSS with non-blocking pattern -->
+<link rel="stylesheet" href="{{ "css/style.css" | relURL }}" media="print" onload="this.media='all'; this.onload=null;">
+<noscript><link rel="stylesheet" href="{{ "css/style.css" | relURL }}"></noscript>
 
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6LVWS4WJ40"></script>

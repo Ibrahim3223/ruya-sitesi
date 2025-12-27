@@ -21,7 +21,9 @@
       "Bash(else echo \"Progress dosyasi yok\")",
       "Bash(fi)",
       "Bash(cat:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(schtasks /create /tn \"RuyaSitesi_DailyIndexing\" /tr \"c:\\\\Users\\\\Dante\\\\Desktop\\\\Yeniden\\\\WebSite\\\\ruya-sitesi\\\\scripts\\\\daily_indexing.bat\" /sc daily /st 10:00 /f)",
+      "Bash(copy:*)"
     ]
   }
 }
