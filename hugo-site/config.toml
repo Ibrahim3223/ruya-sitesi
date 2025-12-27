@@ -1,14 +1,14 @@
 baseURL = "https://ruyatabirisozlugu.com/"
 languageCode = "tr"
-title = "Rüya Tabiri Sözlüğü - Rüya Yorumları ve Anlamları"
-description = "Türkiye'nin en kapsamlı rüya tabiri sözlüğü. İslami ve psikolojik rüya yorumları, binlerce detaylı rüya anlamı."
+title = "Rüya Tabirleri Sözlüğü | 8000+ İslami Rüya Tabiri (2025)"
+description = "Türkiye'nin en kapsamlı rüya tabirleri sözlüğü. İmam-ı Nablusi ve İbni Sirin'e göre İslami yorumlar, modern psikolojik analizler. 8000+ detaylı rüya tabiri."
 
 enableRobotsTXT = true
 canonifyURLs = true
 
 [params]
-  siteName = "Rüya Tabiri Sözlüğü"
-  description = "Rüyalarınızın anlamını keşfedin. İslami kaynaklara, psikolojik yorumlara ve geleneksel tabirlere göre binlerce rüya tabiri."
+  siteName = "Rüya Tabirleri Sözlüğü"
+  description = "Türkiye'nin en kapsamlı rüya tabirleri sözlüğü. İmam-ı Nablusi ve İbni Sirin'e göre İslami yorumlar, modern psikolojik analizler. 8000+ detaylı rüya tabiri."
   author = "Rüya Tabiri Sözlüğü"
   logo = "🌙"
   tagline = "Rüyalarınızın Anlamını Keşfedin"
@@ -37,6 +37,19 @@ canonifyURLs = true
 
 [minify]
   minifyOutput = true
+  [minify.tdewolff]
+    [minify.tdewolff.html]
+      keepWhitespace = false
+      keepEndTags = false
+    [minify.tdewolff.css]
+      precision = 0
+    [minify.tdewolff.js]
+      precision = 0
+      keepVarNames = false
+
+[imaging]
+  quality = 85
+  resampleFilter = "Lanczos"
 
 [pagination]
   pagerSize = 24

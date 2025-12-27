@@ -15,13 +15,46 @@
     "publisher": {
         "@type": "Organization",
         "name": "{{ .Site.Params.siteName }}",
-        "url": "{{ .Site.BaseURL }}"
+        "url": "{{ .Site.BaseURL }}",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "{{ .Site.BaseURL }}logo.png",
+            "width": 500,
+            "height": 500
+        }
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "{{ .Permalink }}"
     },
     "inLanguage": "tr-TR"
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Ana Sayfa",
+            "item": "{{ .Site.BaseURL }}"
+        }
+        {{ with .Params.categories }}
+        ,{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "{{ index . 0 | title }}",
+            "item": "{{ $.Site.BaseURL }}categories/{{ index . 0 | urlize }}/"
+        }
+        {{ end }}
+        ,{
+            "@type": "ListItem",
+            "position": {{ if .Params.categories }}3{{ else }}2{{ end }},
+            "name": "{{ .Title }}"
+        }
+    ]
 }
 </script>
 {{ else if .IsHome }}
