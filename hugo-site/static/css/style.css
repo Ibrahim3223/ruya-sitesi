@@ -1104,6 +1104,20 @@ a:hover {
     color: white;
 }
 
+.footer-legal-links {
+    margin-top: 8px;
+    font-size: 11px;
+}
+
+.footer-legal-links a {
+    color: rgba(255,255,255,0.6);
+    margin: 0 4px;
+}
+
+.footer-legal-links a:hover {
+    color: white;
+}
+
 /* Back to Top */
 .back-to-top {
     position: fixed;
@@ -1781,7 +1795,7 @@ a:hover {
     }
 
     .footer-content {
-        grid-template-columns: 2fr repeat(3, 1fr);
+        grid-template-columns: 2fr repeat(4, 1fr);
         gap: 32px;
         text-align: left;
     }

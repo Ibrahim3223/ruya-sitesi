@@ -12,6 +12,7 @@
             <li><a href="/" {{ if .IsHome }}class="active"{{ end }}>Ana Sayfa</a></li>
             <li><a href="/ruya/" {{ if eq .Section "ruya" }}class="active"{{ end }}>Tüm Tabirler</a></li>
             <li><a href="/categories/">Kategoriler</a></li>
+            <li><a href="/blog/" {{ if eq .Section "blog" }}class="active"{{ end }}>Blog</a></li>
             <li><a href="/hakkimizda/">Hakkımızda</a></li>
         </ul>
 
