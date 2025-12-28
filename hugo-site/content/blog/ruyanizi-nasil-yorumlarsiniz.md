@@ -6,6 +6,7 @@ date: 2025-01-15
 lastmod: 2025-12-27
 categories: ["Rüya Yorumlama"]
 tags: ["rüya yorumu", "rüya günlüğü", "rüya sembolleri", "pratik rehber"]
+icon: "📝"
 ---
 
 # Rüyanızı Nasıl Yorumlarsınız: Adım Adım Kılavuz

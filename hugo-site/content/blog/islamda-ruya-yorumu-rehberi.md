@@ -6,6 +6,7 @@ date: 2025-01-05
 lastmod: 2025-12-27
 categories: ["İslami Rüya Yorumu"]
 tags: ["İslam", "rüya yorumu", "İbni Sirin", "İmam-ı Nablusi", "Cafer-i Sadık"]
+icon: "🕌"
 ---
 
 # İslam'da Rüya Yorumu: Kapsamlı Rehber

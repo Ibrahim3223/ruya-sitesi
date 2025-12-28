@@ -6,6 +6,7 @@ date: 2025-01-10
 lastmod: 2025-12-27
 categories: ["Rüya Psikolojisi"]
 tags: ["psikoloji", "Freud", "Jung", "bilinçaltı", "rüya analizi"]
+icon: "🧠"
 ---
 
 # Rüya Psikolojisi: Freud ve Jung'un Yaklaşımları
